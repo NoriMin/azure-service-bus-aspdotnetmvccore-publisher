@@ -1,0 +1,50 @@
+﻿@using SimonGilbert.Blog.ViewModels
+@model RestaurantOrderViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="row">
+    <div class="col-md-6 col-11 mx-auto">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4>Create Restaurant Order</h4>
+            </div>
+            <div class="panel-body">
+                <form asp-controller="Home" asp-action="Index" method="POST">
+                    <div class="form-group">
+                        <label asp-for="RestaurantName" class="control-label"></label>
+                        <div>
+                            <input asp-for="RestaurantName" class="form-control" />
+                            <span asp-validation-for="RestaurantName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top:10px">
+                        <label asp-for="StarterCourse" class="control-label"></label>
+                        <div>
+                            <input asp-for="StarterCourse" class="form-control" />
+                            <span asp-validation-for="StarterCourse" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top:10px">
+                        <label asp-for="MainCourse" class="control-label"></label>
+                        <div>
+                            <input asp-for="MainCourse" class="form-control" />
+                            <span asp-validation-for="MainCourse" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top:10px">
+                        <label asp-for="DessertCourse" class="control-label"></label>
+                        <div>
+                            <input asp-for="DessertCourse" class="form-control" />
+                            <span asp-validation-for="DessertCourse" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top:10px">
+                        <button asp class="btn btn-primary btn-block">Create Restaurant Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
