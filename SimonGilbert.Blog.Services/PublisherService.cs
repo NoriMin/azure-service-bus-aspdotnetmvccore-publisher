@@ -10,8 +10,8 @@ namespace SimonGilbert.Blog.Services
 {
     public class PublisherService : IPublisherService
     {
-        private const string ServiceBusPrimaryConnectionString = "[INSERT HERE]";
-        private const string TopicName = "[INSERT HERE]";
+        private const string ServiceBusPrimaryConnectionString = "Endpoint=sb://taminaholprep.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=3mWFoAN6DSbitTYB7zgqGGK3/eGClWYrea5dORyGYCg=";
+        private const string TopicName = "restaurant-orders";
         private static ITopicClient _topicClient;
 
         public PublisherService()
